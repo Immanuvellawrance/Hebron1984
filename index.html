@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hebron Prayer House </title>
+
+<meta name="description" content="Hebron Prayer House - Christ-centered church in Royapuram, Chennai dedicated to worship, prayer, discipleship and sharing the Gospel of Jesus Christ.">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --primary:#0f172a;
+    --secondary:#c9a227;
+    --light:#f8fafc;
+    --dark:#111827;
+    --white:#ffffff;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    color:#333;
+    line-height:1.7;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+header{
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:1000;
+    background:rgba(15,23,42,.95);
+    backdrop-filter:blur(10px);
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 0;
+}
+
+.logo{
+    color:#fff;
+    font-size:1.4rem;
+    font-weight:700;
+}
+
+.logo span{
+    color:var(--secondary);
+}
+
+.nav-links{
+    display:flex;
+    gap:25px;
+}
+
+.nav-links a{
+    color:#fff;
+    text-decoration:none;
+    font-weight:500;
+}
+
+.hero{
+    height:100vh;
+    background:
+    linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+    url('assets/IMG_20250928_094630204.jpg');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    text-align:center;
+    color:white;
+}
+
+.hero-content{
+    width:100%;
+}
+
+.hero h1{
+    font-size:4rem;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:1.2rem;
+    max-width:800px;
+    margin:auto;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:14px 28px;
+    background:var(--secondary);
+    color:#fff;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:600;
+}
+
+section{
+    padding:90px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-title h2{
+    font-size:2.5rem;
+    color:var(--primary);
+}
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+    align-items:center;
+}
+
+.about-grid img{
+    width:100%;
+    border-radius:12px;
+}
+
+.services{
+    background:#f8fafc;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:#fff;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.card h3{
+    color:var(--primary);
+    margin-bottom:10px;
+}
+
+.ministries{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.ministry{
+    background:#fff;
+    padding:30px;
+    border-radius:12px;
+    text-align:center;
+    box-shadow:0 10px 20px rgba(0,0,0,.08);
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:15px;
+}
+
+.gallery img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+.youtube{
+    background:var(--primary);
+    color:white;
+    text-align:center;
+}
+
+.youtube a{
+    color:#fff;
+}
+
+.youtube .section-title h2{
+    color:#fff;
+}
+
+.youtube .section-title p{
+    color:#cbd5e1;
+    max-width:650px;
+    margin:10px auto 0;
+}
+
+.yt-main-grid{
+    display:grid;
+    grid-template-columns:1.4fr 1fr;
+    gap:30px;
+    text-align:left;
+    margin-top:50px;
+}
+
+.yt-panel{
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:14px;
+    padding:20px;
+}
+
+.yt-panel h3{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:15px;
+    font-size:1.15rem;
+}
+
+.live-dot{
+    width:10px;
+    height:10px;
+    border-radius:50%;
+    background:#ef4444;
+    display:inline-block;
+    animation:pulse-dot 1.5s infinite;
+}
+
+@keyframes pulse-dot{
+    0%{box-shadow:0 0 0 0 rgba(239,68,68,.6);}
+    70%{box-shadow:0 0 0 10px rgba(239,68,68,0);}
+    100%{box-shadow:0 0 0 0 rgba(239,68,68,0);}
+}
+
+.video-frame-wrap{
+    position:relative;
+    width:100%;
+    padding-top:56.25%;
+    border-radius:10px;
+    overflow:hidden;
+    background:#000;
+}
+
+.video-frame-wrap iframe{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    border:0;
+}
+
+.yt-thumb{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    cursor:pointer;
+}
+
+.yt-play-btn{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:64px;
+    height:64px;
+    border-radius:50%;
+    background:rgba(201,162,39,.9);
+    color:#fff;
+    border:none;
+    font-size:1.4rem;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition:transform .2s ease, background .2s ease;
+}
+
+.yt-play-btn:hover{
+    background:var(--secondary);
+    transform:translate(-50%,-50%) scale(1.08);
+}
+
+.yt-panel p.note{
+    margin-top:12px;
+    font-size:.9rem;
+    color:#cbd5e1;
+}
+
+.shorts-row{
+    display:flex;
+    gap:15px;
+    overflow-x:auto;
+    padding-bottom:10px;
+    scroll-snap-type:x mandatory;
+}
+
+.short-frame-wrap{
+    flex:0 0 200px;
+    position:relative;
+    width:200px;
+    height:355px;
+    border-radius:12px;
+    overflow:hidden;
+    background:#000;
+    scroll-snap-align:start;
+}
+
+.short-frame-wrap iframe{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    border:0;
+}
+
+.short-frame-wrap .yt-play-btn{
+    width:48px;
+    height:48px;
+    font-size:1.1rem;
+}
+
+.yt-cta{
+    text-align:center;
+    margin-top:40px;
+}
+
+@media(max-width:900px){
+.yt-main-grid{
+    grid-template-columns:1fr;
+}
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+    padding:14px;
+    margin-bottom:15px;
+    border:1px solid #ddd;
+    border-radius:8px;
+}
+
+.contact-form button{
+    background:var(--secondary);
+    color:white;
+    border:none;
+    padding:14px 24px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+footer{
+    background:var(--primary);
+    color:white;
+    text-align:center;
+    padding:40px 0;
+}
+
+.whatsapp{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:white;
+    padding:15px 20px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:600;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:2.5rem;
+}
+
+.about-grid,
+.contact-grid{
+grid-template-columns:1fr;
+}
+
+.nav-links{
+display:none;
+}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container">
+<nav>
+<div class="logo">Hebron <span>Prayer House</span></div>
+
+<div class="nav-links">
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#ministries">Ministries</a>
+<a href="#gallery">Gallery</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+</div>
+</header>
+
+<section class="hero">
+<div class="container hero-content">
+<h1>Hebron Prayer House</h1>
+<p>
+A Christ-Centered Church Dedicated to Worship, Prayer,
+Discipleship and Sharing the Gospel of Jesus Christ.
+</p>
+
+<a href="#contact" class="btn">Plan Your Visit</a>
+</div>
+</section>
+
+<section id="about">
+<div class="container">
+
+<div class="section-title">
+<h2>About Us</h2>
+</div>
+
+<div class="about-grid">
+
+<div>
+<img src="assets/hph-4.jpg">
+</div>
+
+<div>
+
+<p>
+Hebron Prayer House is a Christ-centered church dedicated to worship,
+prayer, discipleship, and sharing the Gospel of Jesus Christ.
+Located in Royapuram, Chennai, our mission is to lead people into a
+deeper relationship with God through Biblical teaching, heartfelt
+worship, and a life transformed by the Holy Spirit.
+</p>
+
+<br>
+
+<p>
+Under the leadership of Pastor J. Immanuvel Devaraj, Hebron Prayer House
+serves individuals and families through worship services, prayer meetings,
+Bible studies, and outreach ministries.
+</p>
+
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section id="services" class="services">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Service Times</h2>
+</div>
+
+<div class="cards">
+
+<div class="card">
+<h3>Sunday Morning Worship</h3>
+<p>7:00 AM – 9:30 AM</p>
+</div>
+
+<div class="card">
+<h3>Sunday Evening Worship</h3>
+<p>6:30 PM – 8:30 PM</p>
+</div>
+
+<div class="card">
+<h3>Prayer & Fellowship</h3>
+<p>Join us as we seek God together in prayer and worship.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="ministries">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Our Ministries</h2>
+</div>
+
+<div class="ministries">
+
+<div class="ministry">
+<h3>Prayer Ministry</h3>
+<p>Interceding for families, church and community.</p>
+</div>
+
+<div class="ministry">
+<h3>Bible Study</h3>
+<p>Growing deeper in God's Word together.</p>
+</div>
+
+<div class="ministry">
+<h3>Youth Fellowship</h3>
+<p>Building faith among the next generation.</p>
+</div>
+
+<div class="ministry">
+<h3>Outreach Ministry</h3>
+<p>Sharing Christ's love beyond church walls.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="gallery">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Church Gallery</h2>
+</div>
+
+<div class="gallery">
+
+<img src="assets/IMG_20250928_094630204.jpg">
+<img src="assets/IMG_20250622_081131813_PORTRAIT.jpg">
+<img src="assets/IMG_20250622_083426838_HDR.jpg">
+<img src="assets/IMG_0788.JPG">
+<img src="assets/IMG_20250928_081723445_PORTRAIT.jpg">
+</div>
+
+</div>
+
+</section>
+
+<section class="youtube">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Watch Our Sermons</h2>
+<p>Live services, recent messages and shorts — straight from our YouTube channel, Hebron Prayer House (1984).</p>
+</div>
+
+<div class="yt-main-grid">
+
+<div class="yt-panel">
+<h3><span class="live-dot"></span> Latest Message</h3>
+<iframe width="650" height="350" src="https://www.youtube.com/embed/BpAVEM1JLKc" title="Sunday Service | 07 Jun | Pastor Immanuel Devaraj | HPH 1984 |" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<p class="note">Watch our most recent message. Catch us live on Sundays — see service times above.</p>
+</div>
+
+<div class="yt-panel">
+<h3>Recent Uploads</h3>
+<div class="video-frame-wrap yt-lazy" data-video-id="vqSAfmRM4qI">
+<img class="yt-thumb" onerror="this.onerror=null;this.src=this.src.replace('hqdefault','mqdefault');" src="https://img.youtube.com/vi/vqSAfmRM4qI/hqdefault.jpg" alt="Recent upload thumbnail" loading="lazy">
+<button class="yt-play-btn" type="button" aria-label="Play video">▶</button>
+</div>
+<p class="note">Browse through our latest sermons and recordings on YouTube.</p>
+</div>
+
+</div>
+
+<div class="yt-panel" style="margin-top:30px;">
+<h3>Shorts</h3>
+<div class="shorts-row">
+
+<div class="short-frame-wrap yt-lazy" data-video-id="TovuaA8fSCE">
+<img class="yt-thumb" onerror="this.onerror=null;this.src=this.src.replace('hqdefault','mqdefault');" src="https://img.youtube.com/vi/TovuaA8fSCE/hqdefault.jpg" alt="Short video thumbnail" loading="lazy">
+<button class="yt-play-btn" type="button" aria-label="Play video">▶</button>
+</div>
+
+<div class="short-frame-wrap yt-lazy" data-video-id="cLGaD9M3EYg">
+<img class="yt-thumb" onerror="this.onerror=null;this.src=this.src.replace('hqdefault','mqdefault');" src="https://img.youtube.com/vi/cLGaD9M3EYg/hqdefault.jpg" alt="Short video thumbnail" loading="lazy">
+<button class="yt-play-btn" type="button" aria-label="Play video">▶</button>
+</div>
+
+<div class="short-frame-wrap yt-lazy" data-video-id="6obq18CMqTo">
+<img class="yt-thumb" onerror="this.onerror=null;this.src=this.src.replace('hqdefault','mqdefault');" src="https://img.youtube.com/vi/6obq18CMqTo/hqdefault.jpg" alt="Short video thumbnail" loading="lazy">
+<button class="yt-play-btn" type="button" aria-label="Play video">▶</button>
+</div>
+
+<div class="short-frame-wrap yt-lazy" data-video-id="VkqO85i1b7I">
+<img class="yt-thumb" onerror="this.onerror=null;this.src=this.src.replace('hqdefault','mqdefault');" src="https://img.youtube.com/vi/VkqO85i1b7I/hqdefault.jpg" alt="Short video thumbnail" loading="lazy">
+<button class="yt-play-btn" type="button" aria-label="Play video">▶</button>
+</div>
+
+<div class="short-frame-wrap yt-lazy" data-video-id="vqSAfmRM4qI">
+<img class="yt-thumb" onerror="this.onerror=null;this.src=this.src.replace('hqdefault','mqdefault');" src="https://img.youtube.com/vi/vqSAfmRM4qI/hqdefault.jpg" alt="Short video thumbnail" loading="lazy">
+<button class="yt-play-btn" type="button" aria-label="Play video">▶</button>
+</div>
+
+<div class="short-frame-wrap yt-lazy" data-video-id="QvXjs5Mp17g">
+<img class="yt-thumb" onerror="this.onerror=null;this.src=this.src.replace('hqdefault','mqdefault');" src="https://img.youtube.com/vi/QvXjs5Mp17g/hqdefault.jpg" alt="Short video thumbnail" loading="lazy">
+<button class="yt-play-btn" type="button" aria-label="Play video">▶</button>
+</div>
+
+<div class="short-frame-wrap yt-lazy" data-video-id="qz7a2tfqHnQ">
+<img class="yt-thumb" onerror="this.onerror=null;this.src=this.src.replace('hqdefault','mqdefault');" src="https://img.youtube.com/vi/qz7a2tfqHnQ/hqdefault.jpg" alt="Short video thumbnail" loading="lazy">
+<button class="yt-play-btn" type="button" aria-label="Play video">▶</button>
+</div>
+
+</div>
+<p class="note">Tap any short to play. For our full Shorts collection, visit the channel below.</p>
+</div>
+
+<div class="yt-cta">
+<a class="btn"
+href="https://www.youtube.com/@hebronhph/featured"
+target="_blank">
+Visit YouTube Channel
+</a>
+&nbsp; &nbsp;
+<a class="btn" style="background:transparent;border:2px solid var(--secondary);"
+href="https://www.youtube.com/@hebronhph/shorts"
+target="_blank">
+Watch All Shorts
+</a>
+&nbsp; &nbsp;
+<a class="btn" style="background:transparent;border:2px solid var(--secondary);"
+href="https://www.youtube.com/@hebronhph/streams"
+target="_blank">
+Past Live Streams
+</a>
+</div>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Contact Us</h2>
+</div>
+
+<div class="contact-grid">
+
+<div>
+
+<h3>Visit Us</h3>
+
+<p>
+56/92, Kalmandapam,<br>
+Royapuram,<br>
+Chennai, Tamil Nadu 600013
+</p>
+
+<br>
+
+<p><strong>Phone:</strong> +91 9710991255</p>
+
+<p><strong>Email:</strong> hebronhph@gmail.com</p>
+
+</div>
+
+<div>
+
+<form class="contact-form">
+
+<input type="text" placeholder="Your Name">
+
+<input type="email" placeholder="Email">
+
+<textarea rows="5" placeholder="Prayer Request"></textarea>
+
+<button type="submit">
+Send Message
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<h3>Hebron Prayer House</h3>
+
+<p>
+Leading people into a deeper relationship with Jesus Christ.
+</p>
+
+<br>
+
+<p>
+© 2026 Hebron Prayer House. All Rights Reserved.
+</p>
+
+</footer>
+
+<a
+class="whatsapp"
+href="https://wa.me/919710991255"
+target="_blank">
+WhatsApp
+</a>
+
+<script>
+document.querySelectorAll('.yt-lazy').forEach(function(wrap){
+    wrap.addEventListener('click', function loadVideo(){
+        var videoId = wrap.getAttribute('data-video-id');
+        var iframe = document.createElement('iframe');
+        iframe.src = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1&rel=0&playsinline=1';
+        iframe.title = 'YouTube video player';
+        iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+        iframe.allowFullscreen = true;
+        wrap.innerHTML = '';
+        wrap.appendChild(iframe);
+        wrap.removeEventListener('click', loadVideo);
+    });
+});
+</script>
+
+</body>
+</html>
